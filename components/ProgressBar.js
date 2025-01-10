@@ -52,7 +52,8 @@ export default function ProgressBar({file,setFile}) {
 
         return ()=>setIptal(true)
 
-    },[url,setFile])
+    },[url,setFile,iptal])
+    
 
     return (
         <div className="progress-bar" style={{width:progress + '%'}}>

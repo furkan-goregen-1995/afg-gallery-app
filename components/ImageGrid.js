@@ -26,13 +26,13 @@ export default function ImageGrid({setSelectedImage}) {
             setDocs(documents);
         })
 
-    },[])
+    },[email])
   return (
     <div className="img-grid">
       {docs && docs.map(doc=>(
-        <div>
+        <div  key={doc.id}>
           
-        <motion.div style={{marginTop:10}} className="img-wrap" key={doc.id} layout whileHover={{opacity:1}} onClick={()=>setSelectedImage(doc.url)}>
+        <motion.div style={{marginTop:10}} className="img-wrap" layout whileHover={{opacity:1}} onClick={()=>setSelectedImage(doc.url)}>
             <motion.img initial={{opacity:0}} animate={{opacity:1}} src={doc.url} alt="yuklendi"/>
         </motion.div>
         <Grid
